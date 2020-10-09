@@ -1,0 +1,39 @@
+{% extends "ups/base.html" %}
+{% block content %}
+    <h1><font size="5" color="White">Click the Tracking Number for details of the package</font></h1>
+    {% for package in packages %}
+        <article class="media content-section">
+            <img class= "rounded-circle article-img" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands-1/512/351_Ups_logo-512.png">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{% url 'shipments-detail' package.pkgId %}">Tracking Number: {{ package.pkgId }}</a>
+              <small class="text-muted">Warehouse Id: {{ package.whId }}</small>
+            </div>
+              <p class="article-content">Warehouse X: {{ package.whX }}</p>
+              <p class="article-content">Warhouse Y: {{ package.whY }}</p>
+              <p class="article-content">Buyer X: {{ package.buyerX }}</p>
+              <p class="article-content">Buyer Y: {{ package.buyerY }}</p>
+              <p class="article-content">TrucK Id: {{ package.truckId }}</p>
+              <p class="article-content">Ups Id: {{ package.upsId }}</p>
+              <p class="article-content">Shipment Status: {{ package.productStatus }}</p>
+              {% if user.is_authenticated %}
+                    {% if user.username == package.upsId %}
+                        {% if package.productStatus == "waiting_for_pickup" %}
+                            <a class="mr-2" href="{% url 'editdestination' package.pkgId %}">Click here to edit the destination</a>
+                        {% endif %}
+                        {% if package.productStatus == "loading_on_truck" %}
+                            <a class="mr-2" href="{% url 'editdestination' package.pkgId %}">Click here to edit the destination</a>
+                        {% endif %}
+                    {% endif %}
+                <br>
+                <br>
+                {% if user.username != " " %}
+                    {% if package.upsId == " " %}
+                    <a class="mr-2" href="{% url 'addpackage' package.pkgId %}">Add this package as mine</a>
+                    {% endif %}
+                {% endif %}
+              {% endif %}
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

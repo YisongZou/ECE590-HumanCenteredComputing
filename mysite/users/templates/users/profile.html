@@ -1,0 +1,23 @@
+{% extends "ups/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587456835930&di=0c800b660b6eec3e4b799b6634d42d52&imgtype=0&src=http%3A%2F%2F8.pic.paopaoche.net%2Fthumb%2Fup%2F2018-8%2F201881617349108200_600_0.jpg">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+      <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Profile Info</legend>
+                {{ u_form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

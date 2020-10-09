@@ -1,0 +1,15 @@
+{% extends "ups/base.html" %}
+{% block content %}
+        <h1><font size="5" color="White">All the Products in the selected Package of Tracking Number: {{ pkgId }}</font></h1>
+        {% for product in products %}
+        <article class="media content-section">
+          <div class="media-body">
+              <div class="article-metadata">
+                  <h5 class="mr-2">Product Id: {{ product.productId }}</h5>
+              </div>
+              <p class="article-content">Product Description: {{ product.productDescrip}}</p>
+              <p class="article-content">Product Count: {{ product.productCount }}</p>
+          </div>
+        </article>
+        {% endfor %}
+{% endblock content %}

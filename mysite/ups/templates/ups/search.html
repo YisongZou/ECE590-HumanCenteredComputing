@@ -1,0 +1,12 @@
+{% extends "ups/base.html" %}
+{% block content %}
+    <h5><font size="5" color="White">Please input the tracking number that you want to search</font></h5>
+    <form action="/searchdetail/" method="POST">
+        {% csrf_token %}
+        <br>
+        <input type="number" name="trackingNum" value="-1">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock content %}

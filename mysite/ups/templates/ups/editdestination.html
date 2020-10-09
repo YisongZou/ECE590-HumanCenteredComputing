@@ -1,0 +1,16 @@
+{% extends "ups/base.html" %}
+{% block content %}
+    <h5><font size="5" color="White">Please input the X and Y of the address you want to change to</font></h5>
+    <form action="/editdestinationResult/" method="POST">
+        {% csrf_token %}
+        <br>
+        <h5><font size="2" color="White">X:</h5>
+        <input type="number" name="X" value="-1">
+        <h5><font size="2" color="White">Y:</font></h5>
+        <input type="number" name="Y" value="-1">
+        <input type="hidden" name="packageId" value={{pkgId}}>
+        <br>
+        <br>
+        <input type="submit" value="Save Change">
+    </form>
+{% endblock content %}
