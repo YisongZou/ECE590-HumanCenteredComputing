@@ -1,6 +1,6 @@
 # ECE590-HumanCenteredComputing
 
-![avatar](https://www.clipartmax.com/middle/m2i8b1m2Z5H7A0G6_outline-hand-drawn-smiley-faces-basic-stock-vector-hand-drawn-happy-face/)
+![avatar](https://www.clipartmax.com/png/full/201-2012740_outline-hand-drawn-smiley-faces-basic-stock-vector-hand-drawn-happy-face.png)
 
 ```
 For the website frontend and backend we use Django
