@@ -12,4 +12,4 @@ To run the website:
 cd mysite
 python3 manage.py runserver 0.0.0.0:8000
 ```
-visit the site at: http://vcm-xxxxx.vm.duke.edu:8000/app/login,
+visit the site at: http://vcm-xxxxx.vm.duke.edu:8000
