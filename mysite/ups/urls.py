@@ -21,8 +21,7 @@ urlpatterns = [
     path('editdestinationResult/', views.editdestinationResult,
          name='editdestinationResult'),
     path('addpackage/<int:pkId>/', views.addpackage, name='addpackage'),
-
-    path('find_specialsts',  views.find_specialists,name='specialists'),
+    path('find_specialsts',  views.find_specialists, name='specialist'),
     path('blog/', PostListView.as_view(), name='post-home'),
     path('blog/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('blog/new/', PostCreateView.as_view(), name='post-create'),
