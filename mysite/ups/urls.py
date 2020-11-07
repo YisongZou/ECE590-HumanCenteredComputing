@@ -27,7 +27,7 @@ urlpatterns = [
     path('blog/new/', PostCreateView.as_view(), name='post-create'),
     path('blog/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
     path('blog/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
-    path('resources/', views.search, name='resources'),
-    path('mood/', views.search, name='mood'),
+    path('resources/', views.resources, name='resources'),
+    path('rate/', views.resources, name='mood'),
     path('profile/', views.search, name='profile'),
 ]

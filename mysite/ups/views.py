@@ -85,6 +85,7 @@ def addpackage(request, pkId):
     package.save()
     return render(request, 'ups/addpackageSuccess.html')
 
+
 def find_specialists(request):
     return render(request, 'ups/specialists.html')
 
@@ -141,10 +142,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 def resources(request):
-    return render(request, 'ups/search.html')
-
-# Contents for the mood functions
-
-
-def mood(request):
-    return render(request, 'ups/search.html')
+    return render(request, 'ups/resource.html')
