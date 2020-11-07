@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 # Create your models here.
@@ -41,5 +42,13 @@ class Truck(models.Model):
 
     # def __str__(self):
     #  return self.truckId
+
+class WMUsers(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    moodRrecord = ArrayField(models.IntegerField(default= 0), blank = True, null = True)
+
+class Doctors(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    rate =  models.IntegerField(default=5)
 
 

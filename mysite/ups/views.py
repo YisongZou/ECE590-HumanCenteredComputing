@@ -78,3 +78,6 @@ def addpackage(request, pkId):
     package.upsId = request.user.username
     package.save()
     return render(request, 'ups/addpackageSuccess.html')
+
+def find_specialists(request):
+    return render(request, 'ups/specialists.html')

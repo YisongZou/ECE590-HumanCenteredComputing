@@ -11,4 +11,5 @@ urlpatterns = [
     path('editdestination/<int:pkgId>/', views.editdestination, name='editdestination'),
     path('editdestinationResult/', views.editdestinationResult, name='editdestinationResult'),
     path('addpackage/<int:pkId>/', views.addpackage, name='addpackage'),
+    path('mood/find_specialsts',  views.find_specialists,name='specialists'),
 ]
