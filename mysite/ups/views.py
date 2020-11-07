@@ -85,6 +85,9 @@ def addpackage(request, pkId):
     package.save()
     return render(request, 'ups/addpackageSuccess.html')
 
+def find_specialists(request):
+    return render(request, 'ups/specialists.html')
+
 # Contents for the blog
 
 
