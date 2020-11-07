@@ -78,3 +78,6 @@ def addpackage(request, pkId):
     package.upsId = request.user.username
     package.save()
     return render(request, 'ups/addpackageSuccess.html')
+
+def resource(request):
+    return render(request, 'ups/resource.html')

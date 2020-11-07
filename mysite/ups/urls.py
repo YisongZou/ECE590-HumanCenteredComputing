@@ -11,4 +11,5 @@ urlpatterns = [
     path('editdestination/<int:pkgId>/', views.editdestination, name='editdestination'),
     path('editdestinationResult/', views.editdestinationResult, name='editdestinationResult'),
     path('addpackage/<int:pkId>/', views.addpackage, name='addpackage'),
+    path('test/', views.resource, name='resource'),
 ]
