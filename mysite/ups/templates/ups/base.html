@@ -53,16 +53,16 @@
          </div>
          <div class="menu">
             <ul>
-               Scroll Down for detailed information
                {% if user.is_authenticated %}
                <li><a href="{% url 'ups-home' %}">Home</a></li>
-               <li><a href="{% url 'shipments' %}">My Shipments</a></li>
-               <li><a href="{% url 'search' %}">Search By Tracking Number</a></li>
+               <li><a href="{% url 'post-home' %}">World Posts</a></li>
+               <li><a href="{% url 'mood' %}">Record Your Mood</a></li>
+               <li><a href="{% url 'specialist' %}">Find a Specialist</a></li>
+               <li><a href="{% url 'resources' %}">Relaxing Resources</a></li>
                <li><a href="{% url 'profile' %}">Profile</a></li>
                <li><a href="{% url 'logout' %}">Logout</a></li>
                {% else %}
                <li><a href="{% url 'ups-home' %}">Home</a></li>
-               <li><a href="{% url 'search' %}">Search By Tracking Number</a></li>
                <li><a href="{% url 'login' %}">Login</a></li>
                <li><a href="{% url 'register' %}">Register</a></li>
                {% endif %}
@@ -120,15 +120,6 @@
    <br>
    <br>
    <br>
-   <div class="content">
-      <p style="color:white">
-         Share you mood here at WeMood!
-      </p>
-      <p style="color:white">
-         Copyright ©2020 Yisong & Junqi & Yue. All rights reserved.
-      </p>
-
-   </div>
 
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
