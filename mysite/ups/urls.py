@@ -28,6 +28,6 @@ urlpatterns = [
     path('blog/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('resources/', views.search, name='resources'),
     path('mood/', views.search, name='mood'),
-    path('mood/', views.search, name='specialist'),
+    path('specialist/', views.search, name='specialist'),
     path('profile/', views.search, name='profile'),
 ]
