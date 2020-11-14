@@ -30,4 +30,5 @@ urlpatterns = [
     path('resources/', views.resources, name='resources'),
     path('rate/', views.moodRecord, name='mood'),
     path('profile/', views.search, name='profile'),
+    path('sharemood/', views.shareMood, name='sharemood'),
 ]
