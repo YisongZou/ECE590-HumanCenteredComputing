@@ -146,4 +146,4 @@ def resources(request):
 
 
 def moodRecord(request):
-    return render(request, 'ups/index.html')
+    return render(request, 'ups/Page-1.html')
