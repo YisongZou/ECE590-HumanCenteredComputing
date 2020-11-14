@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Package, Product, Truck, Post
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.http import HttpResponse
+from django.shortcuts import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.views.generic import (
     ListView,
@@ -88,6 +89,17 @@ def addpackage(request, pkId):
 
 def find_specialists(request):
     return render(request, 'ups/specialists.html')
+
+def my_reservations(request):
+    return render(request,'ups/my_reservations.html')
+
+def reservation(request):
+    if request.method == 'POST':
+        return HttpResponseRedirect('/reservation_success')
+    return render(request, 'ups/reservation.html')
+
+def reservation_success(request):
+    return render(request, 'ups/reservation_success.html')
 
 # Contents for the blog
 
