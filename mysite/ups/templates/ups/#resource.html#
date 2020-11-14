@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+  <html>
+  <body>
+    <styple>
+      body https://cdn.pixabay.com/photo/2016/10/11/15/40/smilies-1731921_1280.jpg{
+         background-image: url('https://cdn.pixabay.com/photo/2016/10/11/15/40/smilies-1731921_1280.jpg');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+      }
+    </style>  
+  </body>
+  </html>
