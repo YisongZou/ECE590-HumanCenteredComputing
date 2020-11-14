@@ -143,3 +143,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def resources(request):
     return render(request, 'ups/resource.html')
+
+
+def moodRecord(request):
+    return render(request, 'ups/moodRecord.html')
