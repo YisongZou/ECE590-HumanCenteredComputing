@@ -28,6 +28,8 @@ urlpatterns = [
     path('blog/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
     path('blog/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('resources/', views.resources, name='resources'),
-    path('rate/', views.resources, name='mood'),
+    path('rate/', views.moodRecord, name='mood'),
     path('profile/', views.search, name='profile'),
+    path('sharemood/', views.shareMood, name='sharemood'),
+    path('about/', views.about, name='about'),
 ]
