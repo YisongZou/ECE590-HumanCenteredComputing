@@ -151,3 +151,7 @@ def moodRecord(request):
 
 def shareMood(request):
     return render(request, 'ups/Page-2.html')
+
+
+def about(request):
+    return render(request, 'ups/Page-3.html')
