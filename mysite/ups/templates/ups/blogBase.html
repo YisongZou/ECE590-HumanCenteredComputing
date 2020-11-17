@@ -54,13 +54,16 @@
             <div class="menu">
                 <ul>
                     {% if user.is_authenticated %}
+
                     <li><a href="{% url 'ups-home' %}">Home</a></li>
                     <li><a href="{% url 'post-home' %}">World Posts</a></li>
                     <li><a href="{% url 'mood' %}">Record Your Mood</a></li>
                     <li><a href="{% url 'specialist' %}">Find a Specialist</a></li>
+                    <li><a href={% url 'my_reservations' %}>Reservation</a></li>
                     <li><a href="{% url 'resources' %}">Relaxing Resources</a></li>
                     <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
+
                     {% else %}
                     <li><a href="{% url 'ups-home' %}">Home</a></li>
                     <li><a href="{% url 'login' %}">Login</a></li>
