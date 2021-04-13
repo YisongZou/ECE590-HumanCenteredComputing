@@ -5,8 +5,15 @@
 ```
 For the website frontend and backend we use Django
 ```
-
-To run the website:
+Environment setup
+```
+sudo apt-get install python3-pip
+python3 -m pip install Django
+pip3 install --user django-crispy-forms
+sudo apt-get install libpq-dev
+pip3 install psycopg2
+```
+To run the website:(Remember to add the server into the allowed hosts inside mysite/settings.py)
 
 ```
 cd mysite
