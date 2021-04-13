@@ -4,6 +4,7 @@
 
 ```
 For the website frontend and backend we use Django
+For the database, we used the elephantsql(https://www.elephantsql.com/) which is PostgreSQL as a Service
 ```
 Environment setup
 ```
